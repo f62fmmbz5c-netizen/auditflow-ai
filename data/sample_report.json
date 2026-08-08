@@ -1,0 +1,82 @@
+{
+  "report_id": "RPT-341FC8A5D9",
+  "task_id": "AUD-FAA3DFB5F1",
+  "audit_type": "E-Commerce Audit",
+  "executive_summary": "AuditFleet identified 3 evidence-backed finding(s). Human approval is required before persistence or dispatch.",
+  "findings": [
+    {
+      "finding_id": "F-001",
+      "title": "Privileged account without MFA",
+      "category": "ACCESS_CONTROL",
+      "severity": "HIGH",
+      "description": "A privileged account is shown without multi-factor authentication.",
+      "evidence": [
+        {
+          "source": "sample_audit.txt",
+          "reference": "matched text",
+          "excerpt": "admin01 role=admin MFA=false"
+        }
+      ],
+      "confidence": 0.98,
+      "recommendation": "Enforce MFA for every privileged account and block exceptions by policy."
+    },
+    {
+      "finding_id": "F-002",
+      "title": "Refund approval lacks segregation of duties",
+      "category": "SEGREGATION_OF_DUTIES",
+      "severity": "CRITICAL",
+      "description": "The same identity can initiate and approve a refund transaction.",
+      "evidence": [
+        {
+          "source": "sample_audit.txt",
+          "reference": "matched text",
+          "excerpt": "refund ... same user initiated and approved"
+        }
+      ],
+      "confidence": 0.96,
+      "recommendation": "Require independent refund approval above the configured materiality threshold."
+    },
+    {
+      "finding_id": "F-003",
+      "title": "Repeated failed logins not escalated",
+      "category": "SECURITY_MONITORING",
+      "severity": "MEDIUM",
+      "description": "Repeated authentication failures are present without evidence of lockout or escalation.",
+      "evidence": [
+        {
+          "source": "sample_audit.txt",
+          "reference": "matched text",
+          "excerpt": "repeated failed login attempts detected"
+        }
+      ],
+      "confidence": 0.88,
+      "recommendation": "Add alerting, rate limiting, and lockout thresholds for repeated authentication failures."
+    }
+  ],
+  "traces": [
+    {
+      "agent": "planner",
+      "summary": "Decomposed the audit into evidence, compliance, and risk workstreams."
+    },
+    {
+      "agent": "evidence_reviewer",
+      "summary": "Mapped each candidate issue to source evidence."
+    },
+    {
+      "agent": "compliance_auditor",
+      "summary": "Evaluated control design and segregation-of-duties concerns."
+    },
+    {
+      "agent": "risk_analyst",
+      "summary": "Assigned severity and confidence to supported findings."
+    },
+    {
+      "agent": "report_gatekeeper",
+      "summary": "Blocked unsupported findings and prepared the draft for human approval."
+    }
+  ],
+  "state": "AWAITING_APPROVAL",
+  "created_at": "2026-08-08T14:12:00.166220Z",
+  "approved_at": null,
+  "reviewer_note": null
+}

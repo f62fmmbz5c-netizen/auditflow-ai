@@ -1,0 +1,6 @@
+E-Commerce Audit Log
+2026-08-08 admin01 role=admin MFA=false email=admin@example.com
+2026-08-08 refund TX-1042 amount=25000 same user initiated and approved
+2026-08-08 repeated failed login attempts: 50 for account customer_991
+Customer phone: 0912-345-678
+Card on file: 4111 1111 1111 1111

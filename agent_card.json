@@ -1,0 +1,21 @@
+{
+  "name": "AuditFleet AI",
+  "description": "Evidence-backed multi-agent audit workflow with mandatory human approval.",
+  "url": "https://YOUR_CLOUD_RUN_URL/",
+  "version": "0.1.0",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text", "application/json"],
+  "skills": [
+    {
+      "id": "audit-evidence-review",
+      "name": "Audit Evidence Review",
+      "description": "Mask PII, analyze audit evidence, produce evidence-backed findings, and stop for human approval.",
+      "tags": ["audit", "risk", "compliance", "evidence", "human-in-the-loop"]
+    }
+  ]
+}
