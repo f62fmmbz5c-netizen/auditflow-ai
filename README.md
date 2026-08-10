@@ -92,4 +92,4 @@ Before deploying, create the Artifact Registry repository referenced by `cloudbu
 
 ## Status
 
-**v0.1.0 — Phase 1 MVP.** Firestore persistence, production PDF ingestion, richer ADK delegation, OpenTelemetry exporters, and policy-specific control libraries are Phase 2.
+**v0.1.0 — Phase 1 MVP.**  Production PDF ingestion, richer ADK delegation, OpenTelemetry exporters, and policy-specific control libraries are Phase 2.
