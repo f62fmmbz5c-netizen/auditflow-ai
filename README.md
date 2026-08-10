@@ -1,6 +1,6 @@
 # AuditFlow AI
 
-AuditFleet AI is an evidence-backed multi-agent audit control system designed around three rules:
+AuditFlow AI is an evidence-backed multi-agent audit control system designed around three rules:
 
 1. **PII is masked before model processing.**
 2. **No finding without evidence.**
