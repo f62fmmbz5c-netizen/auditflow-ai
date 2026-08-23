@@ -7,6 +7,7 @@ AuditFlow AI is an evidence-backed multi-agent audit control system designed aro
 3. **No persistence or external dispatch before human approval.**
 
 ## Architecture
+<img width="1448" height="1086" alt="ChatGPT_Image_2026年8月10日_下午09_54_25" src="https://github.com/user-attachments/assets/e5ea2db3-9c9b-4b4e-916d-fbc369a73e78" />
 
 ```text
 Auditor / API / Streamlit
